@@ -1,0 +1,84 @@
+.game {
+  text-align: center;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  margin-top: 10vh;
+  h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: rgb(79, 151, 163);
+    span {
+      color: rgb(56, 154, 179);
+    }
+  }
+  button {
+    cursor: pointer;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+    color: rgb(56, 154, 179);
+    background: rgb(32, 44, 65);
+    border: 1px solid rgb(21, 70, 82);
+    padding: 0.75rem 1rem;
+    transition: 0.4s;
+    &:hover {
+      background: rgb(55, 73, 105);
+      color: rgb(105, 217, 245);
+    }
+  }
+  h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    color: rgb(79, 151, 163);
+    span {
+      color: rgb(47, 147, 165);
+    }
+  }
+  .WinnerAnouncement {
+    width: 100%;
+    position: absolute;
+    font-size: 4rem;
+    font-family: "Raleway", sans-serif;
+    color: rgb(232, 235, 232);
+    top: 50%;
+    transform: translateY(50%);
+    text-align: center;
+    animation: fadein 1s;
+  }
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 10vh;
+    li {
+      cursor: pointer;
+      border: 1px solid rgb(67, 187, 181);
+      box-shadow: inset 0px 0px 10px 2px rgb(33, 70, 82);
+      p {
+        color: rgb(48, 175, 165);
+        font-size: 4.5rem;
+        font-family: "Roboto", sans-serif;
+        margin-top: 8px;
+        opacity: 0;
+        transition: 0.4s;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .taken {
+        cursor: not-allowed;
+        opacity: 1;
+      }
+    }
+  }
+}
